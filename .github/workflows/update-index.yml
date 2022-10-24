@@ -1,0 +1,16 @@
+name: Update Index
+
+on:
+  push:
+    branches: [ test-wfs, master ]
+outputs:
+  random-number:
+    description: "Random number"
+    value: 2022
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Update Index
+        run: |
+          echo "Hello 2022"
